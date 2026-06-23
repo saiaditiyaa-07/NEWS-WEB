@@ -1,0 +1,283 @@
+[
+  {
+    "id": "1",
+    "title": "Quantum Photonic Accelerators Enter Commercial Production in Tamil Nadu Fab",
+    "title_ta": "குவாண்டம் ஃபோட்டானிக் முடுக்கிகள் வணிகமயமாக்கல்: தமிழகத்தில் உற்பத்தி துவக்கம்",
+    "summary": "Electronic computing is approaching physical silicon limits. A quiet revolution in optoelectronics in Chennai is launching light-based quantum accelerators into industrial scale.",
+    "summary_ta": "மின்சார கணினி அமைப்புகள் சிலிக்கான் எல்லைகளை எட்டுகின்றன. சென்னையில் ஒளியியல் அடிப்படையிலான குவாண்டம் முடுக்கிகளின் உற்பத்தி துவங்கியுள்ளது.",
+    "content": "For over six decades, silicon semiconductors have scaled according to Moore's Law. However, as transistor gates shrink toward single-atom width, thermal dissipation and quantum tunneling present insurmountable physical barriers. To sustain the demands of massive AI training clusters, the industry is looking beyond electrons.\n\nEnter quantum photonic computing. By routing photons through silicon micro-channels, these chips perform tensor operations at the speed of light with near-zero heat generation. Today, leading fabrication facilities in Chennai have announced the first commercially viable manufacturing line for high-density photonic accelerators, marking the end of the experimental phase.\n\nThe system integrates indium phosphide lasers directly onto standard CMOS silicon wafers, a feat once considered a manufacturing impossibility. Initial benchmarks from early developer clusters show a 10x throughput enhancement on matrix multiplications compared to current electronic chips, with a staggering 92% reduction in power draw.",
+    "content_ta": "ஆறு தசாப்தங்களுக்கும் மேலாக, சிலிக்கான் குறைக்கடத்திகள் மூரின் விதிப்படி வளர்ந்துள்ளன. எவ்வாறாயினும், டிரான்சிஸ்டர் வாயில்கள் ஒற்றை அணு அகலத்தை நோக்கிச் சுருங்குவதால், வெப்பச் சிதறல் மற்றும் குவாண்டம் டன்னலிங் ஆகியவை கடக்க முடியாத இயற்பியல் தடைகளாக மாறுகின்றன. இதைக் கடக்க, ஒளியியல் குவாண்டம் சில்லுகள் பயன்பாட்டிற்கு வருகின்றன.\n\nஒளியணுக்களை (ஃபோட்டான்கள்) சிலிக்கான் மைக்ரோ-சேனல்கள் மூலம் செலுத்துவதன் மூலம், இந்த சில்லுகள் ஒளியின் வேகத்தில் கணக்கீடுகளைச் செய்கின்றன. தற்போது, சென்னையில் அமைந்துள்ள முன்னணி உற்பத்தி ஆலை உயர் அடர்த்தி கொண்ட ஃபோட்டானிக் முடுக்கிகளுக்கான வணிக ரீதியிலான உற்பத்தி வரியை அறிவித்துள்ளது.\n\nஇது பாரம்பரிய சிலிக்கான் சில்லுகளுடன் ஒப்பிடும்போது 10 மடங்கு கூடுதல் செயல்திறனை வழங்குகிறது, அத்துடன் மின் தேவையை 92% வரை குறைக்கிறது. இது உலகளாவிய தொழில்நுட்ப அரங்கில் தமிழகத்தின் முக்கிய பங்களிப்பாக இருக்கும்.",
+    "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&q=80",
+    "category": "Technology",
+    "category_ta": "தொழில்நுட்பம்",
+    "author": "Dr. Aris Thorne",
+    "author_role": "Chief Technology Editor",
+    "author_avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+    "published_at": "2026-06-23T10:30:00Z",
+    "views": 41250,
+    "likes": 1280,
+    "trending": true,
+    "editors_pick": true,
+    "district": "Chennai",
+    "tags": [
+      "Quantum Computing",
+      "Technology",
+      "Chennai",
+      "Manufacturing"
+    ],
+    "reading_time": 4,
+    "ai_summary": "This article discusses the commercialization of quantum photonic chips, which use light instead of electricity to perform calculations. By integrating laser sources onto traditional silicon wafers, manufacturers have bypassed the physical heating and speed limits of standard transistors.",
+    "ai_summary_ta": "இந்த கட்டுரை குவாண்டம் ஃபோட்டானிக் சில்லுகளின் வணிகமயமாக்கல் பற்றி விவாதிக்கிறது, இது கணக்கீடுகளை செய்ய மின்சாரத்திற்கு பதிலாக ஒளியைப் பயன்படுத்துகிறது. லேசர் மூலங்களை சிலிக்கான் சில்லுகளுடன் ஒருங்கிணைப்பதன் மூலம், பாரம்பரிய டிரான்சிஸ்டர்களின் வேக வரம்புகளை உற்பத்தியாளர்கள் கடந்துள்ளனர்.",
+    "key_takeaways": [
+      "Traditional electronic silicon is hitting physical limits.",
+      "Quantum photonic chips use light instead of electrons.",
+      "The first commercial-grade optoelectronic fab production lines have officially gone live in Chennai."
+    ],
+    "key_takeaways_ta": [
+      "பாரம்பரிய எலக்ட்ரானிக் சிலிக்கான் அதன் இயற்பியல் வரம்புகளை எட்டியுள்ளது.",
+      "குவாண்டம் ஃபோட்டானிக் சில்லுகள் எலக்ட்ரான்களுக்கு பதிலாக ஒளியை (ஃபோட்டான்களை) பயன்படுத்துகின்றன.",
+      "சென்னையில் முதல் வணிக ரீதியிலான ஆப்டோ எலக்ட்ரானிக் உற்பத்தி வசதி வெற்றிகரமாக துவங்கப்பட்டுள்ளது."
+    ],
+    "sentiment": {
+      "positive": 78,
+      "neutral": 18,
+      "negative": 4,
+      "label": "Highly Optimistic"
+    },
+    "comments": []
+  },
+  {
+    "id": "2",
+    "title": "Chennai Storm Alert: Regional Meteorological Centre Issues Red Alert for Coastal Districts",
+    "title_ta": "சென்னைக்கு ரெட் அலர்ட்: கடலோர மாவட்டங்களில் கனமழை எச்சரிக்கை",
+    "summary": "A deep depression in the Bay of Bengal has intensified into a cyclonic storm, heading towards the Tamil Nadu coast near Chennai.",
+    "summary_ta": "வங்கக் கடலில் உருவாகியுள்ள புதிய தீவிர காற்றழுத்தத் தாழ்வு மண்டலம் புயலாக மாறி, சென்னைக்கு அருகே கரையை கடக்க வாய்ப்புள்ளது.",
+    "content": "The Regional Meteorological Centre (RMC) in Chennai has issued a red alert warning for Chennai, Kancheepuram, Tiruvallur, and Chengalpattu districts as heavy rain batters the coast. Schools and colleges have been declared closed, and rescue squads have been deployed to vulnerable zones. High tidal waves and winds up to 70 km/h are expected to continue over the next 24 hours.\n\nThe state administration has activated 24/7 disaster control rooms and requested citizens to stay indoors. Food packets and drinking water tanks have been prepositioned in low-lying areas in North Chennai and suburbs.",
+    "content_ta": "வங்கக் கடலில் நிலைகொண்டுள்ள காற்றழுத்தத் தாழ்வு மண்டலம் புயலாக வலுப்பெற்றுள்ளதால் சென்னை, காஞ்சிபுரம், திருவள்ளூர் மற்றும் செங்கல்பட்டு மாவட்டங்களுக்கு சென்னை வானிலை ஆய்வு மையம் ரெட் அலர்ட் விடுத்துள்ளது. பள்ளி மற்றும் கல்லூரிகளுக்கு விடுமுறை அறிவிக்கப்பட்டுள்ளது. மீட்புக்குழுவினர் தயார் நிலையில் உள்ளனர்.\n\nமாநில அரசு 24 மணி நேர கட்டுப்பாட்டு அறையை செயல்படுத்தியுள்ளதுடன், பொதுமக்கள் தேவையற்ற பயணங்களைத் தவிர்க்குமாறு அறிவுறுத்தியுள்ளது. வடசென்னை மற்றும் தாழ்வான பகுதிகளில் உணவு மற்றும் குடிநீர் விநியோகம் தயார் செய்யப்பட்டுள்ளது.",
+    "image": "https://images.unsplash.com/photo-1527482797697-8795b05a13fe?auto=format&fit=crop&w=1200&q=80",
+    "category": "Tamil Nadu",
+    "category_ta": "தமிழ்நாடு",
+    "author": "P. Srinivasan",
+    "author_role": "Senior Local Correspondent",
+    "author_avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
+    "published_at": "2026-06-23T11:00:00Z",
+    "views": 32000,
+    "likes": 1820,
+    "trending": true,
+    "editors_pick": false,
+    "district": "Chennai",
+    "tags": [
+      "Rain Alert",
+      "Chennai",
+      "Monsoon",
+      "Government"
+    ],
+    "reading_time": 2,
+    "ai_summary": "RMC Chennai has issued a Red Alert for coastal TN districts due to cyclonic weather conditions, prompting closures and disaster team mobilization.",
+    "ai_summary_ta": "புயல் காரணமாக கடலோர மாவட்டங்களுக்கு சென்னை வானிலை மையம் ரெட் அலர்ட் விடுத்துள்ளது, பள்ளி கல்லூரிகள் விடுமுறை மற்றும் மீட்புக் குழுக்கள் தயார் நிலையில் உள்ளன.",
+    "key_takeaways": [
+      "Red alert issued for Chennai and neighboring districts.",
+      "Wind speeds could reach 70 km/h with heavy tidal waves.",
+      "All educational institutions are closed, and emergency response teams are active."
+    ],
+    "key_takeaways_ta": [
+      "சென்னை மற்றும் அண்டை மாவட்டங்களுக்கு ரெட் அலர்ட் விடுக்கப்பட்டுள்ளது.",
+      "காற்று மணிக்கு 70 கி.மீ வேகத்தில் வீசக்கூடும், அலைகளும் உயரமாக எழும்பும்.",
+      "கல்வி நிறுவனங்கள் மூடப்பட்டு, அவசரகால மீட்புக் குழுக்கள் களமிறக்கப்பட்டுள்ளன."
+    ],
+    "sentiment": {
+      "positive": 10,
+      "neutral": 60,
+      "negative": 30,
+      "label": "Cautionary"
+    },
+    "comments": []
+  },
+  {
+    "id": "3",
+    "title": "Kanyakumari Port Expansion: Center Sanctions ₹4,500 Crore for Deep-water Terminal",
+    "title_ta": "கன்னியாகுமரி துறைமுக விரிவாக்கம்: ₹4,500 கோடி நிதி ஒதுக்கீடு",
+    "summary": "The transshipment container hub development in Kanyakumari receives Union cabinet clearance to capture international maritime corridors.",
+    "summary_ta": "சர்வதேச கடல்சார் வழித்தடங்களைப் பயன்படுத்தும் நோக்கில், கன்னியாகுமரியில் கொள்கலன் மாற்று முனையம் அமைக்க மத்திய அமைச்சரவை ஒப்புதல் அளித்துள்ளது.",
+    "content": "The central government has sanctioned ₹4,500 Crore for the development of a mega deep-water container terminal in Kanyakumari. Positioned at the southernmost tip of the Indian peninsula, the project aims to leverage international shipping routes between the East and West. This terminal will reduce dependency on Sri Lanka's Colombo port for transshipment.\n\nLocal authorities report that environmental clearances have been obtained, and dredging works will commence within three months. The expansion is expected to create over 15,000 direct and indirect jobs in the region.",
+    "content_ta": "கன்னியாகுமரியில் கொள்கலன் மாற்று முனையம் அமைப்பதற்காக மத்திய அரசு ₹4,500 கோடி ஒதுக்கீடு செய்துள்ளது. இந்திய தீபகற்பத்தின் தென்முனையில் அமைந்துள்ள இந்த முனையம் கிழக்கு மற்றும் மேற்கு கடல்வழிப் பாதைகளைப் பயன்படுத்திக் கொள்ளும் வகையில் வடிவமைக்கப்பட உள்ளது.\n\nஇதன் மூலம் சர்வதேச சரக்குப் போக்குவரத்தில் கொழும்பு துறைமுகத்தைச் சார்ந்திருப்பது குறையும். சுற்றுச்சூழல் அனுமதிகள் பெறப்பட்டுள்ளதாகவும், அடுத்த மூன்று மாதங்களில் தூர்வாரும் பணிகள் தொடங்கும் என்றும் உள்ளூர் அதிகாரிகள் தெரிவித்துள்ளனர். இதனால் 15,000 பேருக்கு வேலைவாய்ப்பு உருவாகும்.",
+    "image": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80",
+    "category": "Tamil Nadu",
+    "category_ta": "தமிழ்நாடு",
+    "author": "M. Kumaravel",
+    "author_role": "Infrastructure Analyst",
+    "author_avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    "published_at": "2026-06-22T14:45:00Z",
+    "views": 19400,
+    "likes": 650,
+    "trending": false,
+    "editors_pick": true,
+    "district": "Kanyakumari",
+    "tags": [
+      "Maritime",
+      "Kanyakumari",
+      "Infrastructure",
+      "Economy"
+    ],
+    "reading_time": 3,
+    "ai_summary": "The Central Cabinet has approved ₹4,500 Crore for a deep-water container hub in Kanyakumari to directly tap international trade lanes and boost regional labor markets.",
+    "ai_summary_ta": "சர்வதேச வர்த்தக பாதைகளை நேரடியாகப் பயன்படுத்துவதற்கும் உள்ளூர் பொருளாதாரத்தை மேம்படுத்துவதற்கும் கன்னியாகுமரியில் புதிய துறைமுக திட்டத்திற்கு ₹4,500 கோடி மத்திய அரசு ஒதுக்கியுள்ளது.",
+    "key_takeaways": [
+      "₹4,500 Crore container transshipment terminal cleared in Kanyakumari.",
+      "Direct competitors will include Colombo and Singapore container transshipments.",
+      "Estimated job creation stands at 15,000 local employment openings."
+    ],
+    "key_takeaways_ta": [
+      "கன்னியாகுமரியில் கொள்கலன் மாற்று முனையத்திற்கு ₹4,500 கோடி ஒதுக்கீடு.",
+      "கொழும்பு மற்றும் சிங்கப்பூர் துறைமுகங்களுக்கு போட்டியாக இந்த சரக்கு முனையம் விளங்கும்.",
+      "உள்ளூரில் 15,000 புதிய நேரடி மற்றும் மறைமுக வேலைவாய்ப்புகள் உருவாக்கப்படும்."
+    ],
+    "sentiment": {
+      "positive": 85,
+      "neutral": 12,
+      "negative": 3,
+      "label": "Highly Optimistic"
+    },
+    "comments": []
+  },
+  {
+    "id": "4",
+    "title": "TNPSC Group 4 Recruitment Notification Issued for 8,500 Administrative Vacancies",
+    "title_ta": "டி.என்.பி.எஸ்.சி குரூப் 4 தேர்வு: 8,500 பணியிடங்களுக்கான அறிவிப்பு வெளியீடு",
+    "summary": "Tamil Nadu Public Service Commission has officially opened the application gateway for junior assistants, typists, and village administrative officers.",
+    "summary_ta": "தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் இளநிலை உதவியாளர், தட்டச்சர், கிராம நிர்வாக அலுவலர் பணிகளுக்கான விண்ணப்பங்களை வரவேற்கிறது.",
+    "content": "The Tamil Nadu Public Service Commission (TNPSC) has released the notification for Group 4 exams to fill 8,500 vacancies in various government departments. Qualified candidates can apply online starting today till July 20th. The preliminary exams are scheduled to take place on October 14th across 38 districts of the state.\n\nMinimum qualification remains a pass in Class 10 (SSLC). Competitive coaching centers in Chennai and Madurai have already launched crash courses to train candidates in general studies and Tamil language papers.",
+    "content_ta": "தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் (TNPSC) பல்வேறு அரசுத் துறைகளில் காலியாக உள்ள 8,500 பணியிடங்களை நிரப்புவதற்கான குரூப் 4 தேர்வு அறிவிப்பை வெளியிட்டுள்ளது. தகுதி வாய்ந்த விண்ணப்பதாரர்கள் இன்று முதல் ஜூலை 20 வரை ஆன்லைனில் விண்ணப்பிக்கலாம்.\n\nஇதற்கான தேர்வுகள் அக்டோபர் 14 ஆம் தேதி நடைபெறும். குறைந்தபட்ச கல்வித் தகுதி பத்தாம் வகுப்பு (SSLC) தேர்ச்சி ஆகும். தமிழ் மொழித் தாள் மற்றும் பொது அறிவு பாடங்களுக்காக தமிழகத்தின் பல்வேறு பகுதிகளில் பயிற்சி மையங்கள் சிறப்பு வகுப்புகளைத் தொடங்கியுள்ளன.",
+    "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80",
+    "category": "Jobs",
+    "category_ta": "வேலைவாய்ப்பு",
+    "author": "Anjali Sundaram",
+    "author_role": "Careers Advisor",
+    "author_avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+    "published_at": "2026-06-23T09:15:00Z",
+    "views": 54200,
+    "likes": 2980,
+    "trending": true,
+    "editors_pick": true,
+    "tags": [
+      "TNPSC",
+      "Government Jobs",
+      "Group 4",
+      "Tamil Nadu"
+    ],
+    "reading_time": 2,
+    "ai_summary": "TNPSC released recruitment notices for 8,500 Group 4 openings including VAO and Clerk desks, set for offline SSLC-qualification examination.",
+    "ai_summary_ta": "டி.என்.பி.எஸ்.சி 8,500 குரூப் 4 காலிப் பணியிடங்களை நிரப்ப அறிவிப்பாணை வெளியிட்டுள்ளது. விண்ணப்பங்கள் ஆன்லைனில் பெறப்பட்டு வருகின்றன.",
+    "key_takeaways": [
+      "Total vacant posts: 8,500 administrative positions.",
+      "Application deadline: July 20th, 2026.",
+      "SSLC is the base educational benchmark required to clear eligibility."
+    ],
+    "key_takeaways_ta": [
+      "மொத்த காலி பணியிடங்களின் எண்ணிக்கை: 8,500.",
+      "விண்ணப்பிப்பதற்கான கடைசி நாள்: ஜூலை 20, 2026.",
+      "பத்தாம் வகுப்பு தேர்ச்சி பெற்றவர்கள் விண்ணப்பிக்க தகுதியுடையவர்கள்."
+    ],
+    "sentiment": {
+      "positive": 90,
+      "neutral": 10,
+      "negative": 0,
+      "label": "Highly Positive"
+    },
+    "comments": []
+  },
+  {
+    "id": "5",
+    "title": "Anna University Announces Engineering Counseling Schedule for TNEA 2026 Admissions",
+    "title_ta": "அண்ணா பல்கலைக்கழகம்: பொறியியல் கலந்தாய்வு தேதிகள் அறிவிப்பு",
+    "summary": "Department of Technical Education releases counseling details and rank list publication dates for prospective engineering aspirants in Tamil Nadu.",
+    "summary_ta": "தமிழ்நாட்டில் பொறியியல் படிப்புகளில் சேர விரும்பும் மாணவர்களுக்கான கலந்தாய்வு அட்டவணை மற்றும் தரவரிசைப் பட்டியல் தேதிகள் வெளியிடப்பட்டுள்ளன.",
+    "content": "Anna University and the Department of Technical Education (DoTE) have announced the dates for Tamil Nadu Engineering Admissions (TNEA) 2026 counseling. The registration portal will accept cutoff profiles until July 5th. TNEA rank lists will be released on July 18th, and online choices and branch counseling will commence from July 25th in four distinct rounds.\n\nOver 1.5 Lakh engineering seats are up for grabs across 450 affiliated colleges. Educators advise students to carefully check placement records and academic accreditations of colleges before locking in choices.",
+    "content_ta": "தமிழ்நாடு பொறியியல் சேர்க்கைக்கான (TNEA) கலந்தாய்வு அட்டவணையை அண்ணா பல்கலைக்கழகமும், தொழில்நுட்பக் கல்வி இயக்ககமும் வெளியிட்டுள்ளன. விண்ணப்பதாரர்கள் ஜூலை 5 வரை விண்ணப்பிக்கலாம்.\n\nதரவரிசைப் பட்டியல் ஜூலை 18 ஆம் தேதி வெளியிடப்படும். அதனைத் தொடர்ந்து ஆன்லைன் கலந்தாய்வு ஜூலை 25 ஆம் தேதி தொடங்கும். மொத்தம் நான்கு கட்டங்களாக கலந்தாய்வு நடைபெறும். மாணவர்கள் கல்லூரி விருப்பங்களைத் தேர்வு செய்யும்போது கவனமுடன் இருக்குமாறு அறிவுறுத்தப்பட்டுள்ளனர்.",
+    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+    "category": "Education",
+    "category_ta": "கல்வி",
+    "author": "Dr. R. Ramanujan",
+    "author_role": "Higher Education Correspondent",
+    "author_avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
+    "published_at": "2026-06-22T10:00:00Z",
+    "views": 25100,
+    "likes": 840,
+    "trending": false,
+    "editors_pick": false,
+    "tags": [
+      "Engineering",
+      "Anna University",
+      "Admissions",
+      "TNEA"
+    ],
+    "reading_time": 3,
+    "ai_summary": "TNEA engineering admissions schedule for TNEA 2026 has been published by Anna University with registrations active through July 5th.",
+    "ai_summary_ta": "பொறியியல் படிப்பு சேர்க்கைக்கான டி.என்.இ.ஏ 2026 கலந்தாய்வு அட்டவணையை அண்ணா பல்கலைக்கழகம் வெளியிட்டுள்ளது. இதற்கான விண்ணப்பங்கள் வரவேற்கப்படுகின்றன.",
+    "key_takeaways": [
+      "TNEA registration closes on July 5th, 2026.",
+      "Rank lists will be published on July 18th.",
+      "Online choice filling and allocations will begin on July 25th."
+    ],
+    "key_takeaways_ta": [
+      "பொறியியல் கலந்தாய்வுக்கான விண்ணப்பப் பதிவு ஜூலை 5-ல் நிறைவடைகிறது.",
+      "தரவரிசைப் பட்டியல் ஜூலை 18-ல் வெளியிடப்படும்.",
+      "ஆன்லைனில் கல்லூரிகளைத் தேர்வு செய்யும் முறை ஜூலை 25 முதல் தொடங்கும்."
+    ],
+    "sentiment": {
+      "positive": 80,
+      "neutral": 20,
+      "negative": 0,
+      "label": "Positive"
+    },
+    "comments": []
+  },
+  {
+    "id": "6",
+    "title": "IPL 2026: Chennai Super Kings Clinch Playoff Spot in Thrilling Final Ball Match",
+    "title_ta": "ஐ.பி.எல் 2026: கடைசி பந்தில் த்ரில் வெற்றி - சென்னை சூப்பர் கிங்ஸ் பிளே-ஆஃப் தகுதி",
+    "summary": "CSK secures a playoff berth in the T20 league after defeating Mumbai Indians by 4 wickets in a nail-biting encounter at Chepauk.",
+    "summary_ta": "சேப்பாக்கம் மைதானத்தில் மும்பை அணிக்கு எதிரான போட்டியில் கடைசி பந்தில் வென்று சி.எஸ்.கே பிளே-ஆஃப் சுற்றுக்குத் தகுதி பெற்றுள்ளது.",
+    "content": "The Chennai Super Kings (CSK) secured their place in the IPL 2026 playoffs after a dramatic four-wicket victory over arch-rivals Mumbai Indians at the M.A. Chidambaram Stadium in Chennai. Needing 16 runs off the final over, Ravindra Jadeja hit two consecutive boundaries and a final-ball six to trigger wild celebrations among the home crowd.\n\nMumbai Indians scored 188/5 in their 20 overs, powered by Surya Kumar Yadav's blazing 85. In response, CSK chased down the target in 20 overs, with Ruturaj Gaikwad laying the foundation with a solid 72 run contribution.",
+    "content_ta": "ஐ.பி.எல் 2026 தொடரில் மும்பை இந்தியன்ஸ் அணிக்கு எதிரான ஆட்டத்தில் 4 விக்கெட் வித்தியாசத்தில் வென்று சென்னை சூப்பர் கிங்ஸ் பிளே-ஆஃப் சுற்றுக்கு முன்னேறியுள்ளது. கடைசி ஓவரில் 16 ரன்கள் தேவைப்பட்ட நிலையில், ரவீந்திர ஜடேஜா சிக்ஸர் அடித்து சென்னை அணியை வெற்றி பெறச் செய்தார்.\n\nமுதலில் விளையாடிய மும்பை அணி 20 ஓவர்களில் 188 ரன்கள் எடுத்தது. தொடர்ந்து விளையாடிய சென்னை அணி கடைசி பந்தில் இலக்கை எட்டியது. சென்னை அணியின் கேப்டன் ருதுராஜ் கெய்க்வாட் சிறப்பாக விளையாடி 72 ரன்கள் சேர்த்தார்.",
+    "image": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80",
+    "category": "Sports",
+    "category_ta": "விளையாட்டு",
+    "author": "Vijay Raghavan",
+    "author_role": "Sports Desk Head",
+    "author_avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+    "published_at": "2026-06-23T16:00:00Z",
+    "views": 48200,
+    "likes": 3200,
+    "trending": true,
+    "editors_pick": false,
+    "district": "Chennai",
+    "tags": [
+      "IPL",
+      "CSK",
+      "Cricket",
+      "Chennai",
+      "Sports"
+    ],
+    "reading_time": 3,
+    "ai_summary": "CSK booked their spot in the IPL playoffs following a last-ball victory over MI at Chepauk, with Jadeja hitting the winning runs.",
+    "ai_summary_ta": "சேப்பாக்கத்தில் மும்பை அணிக்கு எதிரான பரபரப்பான ஆட்டத்தில் கடைசி பந்தில் வென்று சென்னை சூப்பர் கிங்ஸ் பிளே-ஆஃப் சுற்றுக்கு தகுதி பெற்றுள்ளது.",
+    "key_takeaways": [
+      "CSK qualifies for IPL 2026 playoffs.",
+      "CSK chased 189 in exactly 20 overs.",
+      "Ravindra Jadeja scored the winning runs off the last ball."
+    ],
+    "key_takeaways_ta": [
+      "சென்னை சூப்பர் கிங்ஸ் பிளே-ஆஃப் சுற்றுக்குத் தகுதி பெற்றுள்ளது.",
+      "189 ரன்கள் கொண்ட இலக்கை சென்னை அணி 20 ஓவர்களில் எட்டியது.",
+      "கடைசி பந்தில் சிக்ஸர் அடித்து ரவீந்திர ஜடேஜா அணியை வெற்றி பெறச் செய்தார்."
+    ],
+    "sentiment": {
+      "positive": 95,
+      "neutral": 5,
+      "negative": 0,
+      "label": "Exuberant"
+    },
+    "comments": []
+  }
+]

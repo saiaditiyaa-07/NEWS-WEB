@@ -1,0 +1,82 @@
+[
+  {
+    "id": "tamilnadu",
+    "name": "Tamil Nadu",
+    "name_ta": "தமிழ்நாடு",
+    "description": "Local updates, state administration, politics, and community reports in Tamil Nadu.",
+    "description_ta": "உள்ளூர் செய்திகள், மாநில நிர்வாகம், அரசியல் மற்றும் சமூக அறிக்கைகள்.",
+    "article_count": 0
+  },
+  {
+    "id": "india",
+    "name": "India",
+    "name_ta": "இந்தியா",
+    "description": "National news, policy changes, central administration, and domestic affairs.",
+    "description_ta": "தேசிய செய்திகள், கொள்கை மாற்றங்கள் மற்றும் உள்நாட்டு விவகாரங்கள்.",
+    "article_count": 0
+  },
+  {
+    "id": "world",
+    "name": "World",
+    "name_ta": "உலகம்",
+    "description": "Global events, international relations, treaties, and foreign bulletins.",
+    "description_ta": "உலகளாவிய நிகழ்வுகள், சர்வதேச உறவுகள் மற்றும் வெளிநாட்டு செய்திகள்.",
+    "article_count": 0
+  },
+  {
+    "id": "business",
+    "name": "Business",
+    "name_ta": "வணிகம்",
+    "description": "Stock markets, corporate mergers, local start-ups, and banking updates.",
+    "description_ta": "பங்குச் சந்தைகள், கார்ப்பரேட் இணைப்புகள், உள்ளூர் ஸ்டார்ட்அப்கள் மற்றும் வங்கி செய்திகள்.",
+    "article_count": 0
+  },
+  {
+    "id": "sports",
+    "name": "Sports",
+    "name_ta": "விளையாட்டு",
+    "description": "Live cricket coverage, football schedules, tournaments, and local athletic bulletins.",
+    "description_ta": "நேரடி கிரிக்கெட் கவரேஜ், போட்டிகள் மற்றும் விளையாட்டு செய்திகள்.",
+    "article_count": 0
+  },
+  {
+    "id": "technology",
+    "name": "Technology",
+    "name_ta": "தொழில்நுட்பம்",
+    "description": "AI, space research, optoelectronics, quantum physics, and software tools.",
+    "description_ta": "செயற்கை நுண்ணறிவு, விண்வெளி ஆராய்ச்சி, மென்பொருள் மற்றும் தொழில்நுட்பம்.",
+    "article_count": 0
+  },
+  {
+    "id": "cinema",
+    "name": "Cinema",
+    "name_ta": "சினிமா",
+    "description": "Kollywood updates, box office figures, movie reviews, and entertainment highlights.",
+    "description_ta": "கோலிவுட் செய்திகள், பாக்ஸ் ஆபீஸ் வசூல் மற்றும் திரைப்பட விமர்சனங்கள்.",
+    "article_count": 0
+  },
+  {
+    "id": "education",
+    "name": "Education",
+    "name_ta": "கல்வி",
+    "description": "NEET updates, JEE admission notifications, Anna University news, and results.",
+    "description_ta": "நீட், ஜே.இ.இ, அண்ணா பல்கலைக்கழக செய்திகள் மற்றும் தேர்வு முடிவுகள்.",
+    "article_count": 0
+  },
+  {
+    "id": "jobs",
+    "name": "Jobs",
+    "name_ta": "வேலைவாய்ப்பு",
+    "description": "TNPSC vacancies, banking jobs, UPSC notices, and private corporate recruitment alerts.",
+    "description_ta": "டி.என்.பி.எஸ்.சி, வங்கிப் பணிகள், யு.பி.எஸ்.சி மற்றும் தனியார் வேலைவாய்ப்பு செய்திகள்.",
+    "article_count": 0
+  },
+  {
+    "id": "districtnews",
+    "name": "District News",
+    "name_ta": "மாவட்ட செய்திகள்",
+    "description": "Localized news updates across Kanyakumari, Chennai, Coimbatore, Madurai, and more.",
+    "description_ta": "கன்னியாகுமரி, சென்னை, கோவை, மதுரை போன்ற மாவட்டங்களின் உள்ளூர் செய்திகள்.",
+    "article_count": 0
+  }
+]
