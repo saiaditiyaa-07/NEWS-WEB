@@ -247,7 +247,7 @@
     "author_role": "Sports Desk Head",
     "author_avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
     "published_at": "2026-06-23T16:00:00Z",
-    "views": 48200,
+    "views": 48201,
     "likes": 3200,
     "trending": true,
     "editors_pick": false,
@@ -277,6 +277,89 @@
       "neutral": 5,
       "negative": 0,
       "label": "Exuberant"
+    },
+    "comments": []
+  },
+  {
+    "title": "Test Title",
+    "content": "Test content of the article.",
+    "summary": "Test summary.",
+    "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c",
+    "category": "Technology",
+    "author": "Test Author",
+    "author_role": "Staff Writer",
+    "author_avatar": "/placeholder-avatar.jpg",
+    "tags": [],
+    "trending": false,
+    "editors_pick": false,
+    "title_ta": "Test Title",
+    "content_ta": "Test content of the article.",
+    "summary_ta": "Test summary.",
+    "category_ta": "Technology",
+    "ai_summary_ta": null,
+    "key_takeaways_ta": null,
+    "district": null,
+    "id": "50f7e825",
+    "published_at": "2026-06-23T10:04:12.869556Z",
+    "views": 0,
+    "likes": 0,
+    "reading_time": 1,
+    "ai_summary": "AI Summary for Test Title",
+    "key_takeaways": [
+      "Important milestone in Tamil Nadu.",
+      "Authored and verified by professional desk."
+    ],
+    "sentiment": {
+      "positive": 62,
+      "neutral": 23,
+      "negative": 2,
+      "label": "Positive"
+    },
+    "comments": []
+  },
+  {
+    "title": "Madurai Tech Park Expansion Announced",
+    "content": "The government has announced a major expansion of the Madurai IT Park, expected to create over 5,000 jobs for local youth.",
+    "summary": "Madurai IT Park expansion is set to bring jobs and growth.",
+    "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=400&q=80",
+    "category": "Technology",
+    "author": "Kumari Desk",
+    "author_role": "Senior Editor",
+    "author_avatar": "/placeholder-avatar.jpg",
+    "tags": [
+      "Madurai",
+      "IT Park",
+      "Jobs"
+    ],
+    "trending": true,
+    "editors_pick": false,
+    "title_ta": "மதுரை தகவல் தொழில்நுட்ப பூங்கா விரிவாக்கம் அறிவிப்பு",
+    "content_ta": "மதுரை தகவல் தொழில்நுட்ப பூங்காவின் முக்கிய விரிவாக்கத்தை அரசாங்கம் அறிவித்துள்ளது, இதனால் உள்ளூர் இளைஞர்களுக்கு 5,000 க்கும் மேற்பட்ட வேலைவாய்ப்புகள் உருவாகும் என எதிர்பார்க்கப்படுகிறது.",
+    "summary_ta": "மதுரை தகவல் தொழில்நுட்ப பூங்கா விரிவாக்கம் வேலைவாய்ப்புகளையும் வளர்ச்சியையும் கொண்டுவர உள்ளது.",
+    "category_ta": "தொழில்நுட்பம்",
+    "ai_summary_ta": "மதுரை தகவல் தொழில்நுட்ப பூங்காவின் 5,000 புதிய வேலைவாய்ப்புகளை உருவாக்கும் விரிவாக்கம் குறித்த அறிவிப்பு.",
+    "key_takeaways_ta": [
+      "மதுரை தகவல் தொழில்நுட்ப பூங்கா விரிவாக்கம் செய்யப்படுகிறது.",
+      "5,000 புதிய வேலைவாய்ப்புகள் உருவாக்கப்படும்.",
+      "உள்ளூர் பொருளாதார வளர்ச்சி மேம்படும்."
+    ],
+    "district": "Madurai",
+    "id": "f0999084",
+    "published_at": "2026-06-23T10:17:04.585336Z",
+    "views": 0,
+    "likes": 0,
+    "reading_time": 1,
+    "ai_summary": "மதுரை தகவல் தொழில்நுட்ப பூங்காவின் 5,000 புதிய வேலைவாய்ப்புகளை உருவாக்கும் விரிவாக்கம் குறித்த அறிவிப்பு.",
+    "key_takeaways": [
+      "மதுரை தகவல் தொழில்நுட்ப பூங்கா விரிவாக்கம் செய்யப்படுகிறது.",
+      "5,000 புதிய வேலைவாய்ப்புகள் உருவாக்கப்படும்.",
+      "உள்ளூர் பொருளாதார வளர்ச்சி மேம்படும்."
+    ],
+    "sentiment": {
+      "positive": 73,
+      "neutral": 11,
+      "negative": 16,
+      "label": "Positive"
     },
     "comments": []
   }

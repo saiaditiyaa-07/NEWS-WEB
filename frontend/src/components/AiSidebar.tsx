@@ -225,7 +225,7 @@ export default function AiSidebar({ articleId, aiSummary, keyTakeaways, sentimen
                   </div>
 
                   {chat.role === "user" && (
-                    <div className="p-1 h-6 w-6 rounded bg-gray-55 text-gray-600 flex items-center justify-center shrink-0 border border-gray-200">
+                    <div className="p-1 h-6 w-6 rounded bg-gray-50 text-gray-600 flex items-center justify-center shrink-0 border border-gray-200">
                       <User className="w-3.5 h-3.5" />
                     </div>
                   )}
@@ -254,7 +254,7 @@ export default function AiSidebar({ articleId, aiSummary, keyTakeaways, sentimen
           </div>
 
           {/* Input Box */}
-          <form onSubmit={handleSendChat} className="p-3 border-t border-gray-200 bg-gray-55 flex gap-2 shrink-0">
+          <form onSubmit={handleSendChat} className="p-3 border-t border-gray-200 bg-gray-50 flex gap-2 shrink-0">
             <input
               type="text"
               placeholder="Ask this article..."

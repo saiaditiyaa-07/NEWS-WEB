@@ -5,8 +5,9 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { 
   Search, Bookmark, Menu, X, Newspaper, 
-  Settings, Sparkles, Clock 
+  Settings, Sparkles, Clock, Globe 
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
   const router = useRouter();
@@ -15,14 +16,20 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentTime, setCurrentTime] = useState("");
   const [bookmarkCount, setBookmarkCount] = useState(0);
+  const { language, setLanguage, t } = useLanguage();
 
-  // Categories list
+  // Localized Categories list
   const categories = [
-    { name: "Technology", href: "/search?category=Technology" },
-    { name: "Science", href: "/search?category=Science" },
-    { name: "Business", href: "/search?category=Business" },
-    { name: "Politics", href: "/search?category=Politics" },
-    { name: "Entertainment", href: "/search?category=Entertainment" },
+    { name: "Tamil Nadu", name_ta: "தமிழ்நாடு", href: "/search?category=Tamil Nadu" },
+    { name: "India", name_ta: "இந்தியா", href: "/search?category=India" },
+    { name: "World", name_ta: "உலகம்", href: "/search?category=World" },
+    { name: "Business", name_ta: "வணிகம்", href: "/search?category=Business" },
+    { name: "Sports", name_ta: "விளையாட்டு", href: "/search?category=Sports" },
+    { name: "Technology", name_ta: "தொழில்நுட்பம்", href: "/search?category=Technology" },
+    { name: "Entertainment", name_ta: "சினிமா", href: "/search?category=Entertainment" },
+    { name: "Education", name_ta: "கல்வி", href: "/education" },
+    { name: "Jobs", name_ta: "வேலைவாய்ப்பு", href: "/jobs" },
+    { name: "Saved Portfolio", name_ta: "சேமித்தவை", href: "/bookmarks" },
   ];
 
   // Update clock & load bookmarks
@@ -36,7 +43,8 @@ export default function Navbar() {
         hour: '2-digit',
         minute: '2-digit'
       };
-      setCurrentTime(new Date().toLocaleDateString('en-US', options));
+      const locale = language === "ta" ? "ta-IN" : "en-US";
+      setCurrentTime(new Date().toLocaleDateString(locale, options));
     };
 
     updateTime();
@@ -50,13 +58,15 @@ export default function Navbar() {
     updateBookmarks();
     window.addEventListener("storage", updateBookmarks);
     window.addEventListener("bookmarksUpdated", updateBookmarks);
+    window.addEventListener("languageChanged", updateTime);
 
     return () => {
       clearInterval(interval);
       window.removeEventListener("storage", updateBookmarks);
       window.removeEventListener("bookmarksUpdated", updateBookmarks);
+      window.removeEventListener("languageChanged", updateTime);
     };
-  }, []);
+  }, [language]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -77,12 +87,12 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1.5 text-[#003366] uppercase tracking-widest text-[10px] font-black">
             <Sparkles className="w-3 h-3 text-[#d60000]" />
-            <span>Digital Edition</span>
+            <span>{t("digitalEdition")}</span>
           </span>
           <span className="h-3 w-px bg-gray-200" />
           <Link href="/admin" className="flex items-center gap-1 hover:text-[#d60000] transition-colors">
             <Settings className="w-3 h-3" />
-            <span>Admin Console</span>
+            <span>{t("adminConsole")}</span>
           </Link>
         </div>
       </div>
@@ -94,15 +104,18 @@ export default function Navbar() {
           <div className="p-1.5 rounded bg-[#d60000] text-white shadow-sm">
             <Newspaper className="w-5 h-5" />
           </div>
-          <span className="serif-title font-black text-2xl tracking-tighter text-[#003366]">
-            AETHER
+          <span className="serif-title font-black text-2xl tracking-tighter text-[#003366] uppercase">
+            {language === "ta" ? "குமரி செய்திகள்" : "KUMARI NEWS"}
           </span>
-          <span className="font-light text-gray-400 uppercase text-xs tracking-widest pl-1">NEWS</span>
+          <span className="font-light text-gray-400 uppercase text-[9px] tracking-widest pl-1 hidden sm:inline">
+            {language === "ta" ? "டிஜிட்டல்" : "DIGITAL"}
+          </span>
         </Link>
 
         {/* Desktop Category Links */}
-        <nav className="hidden md:flex gap-6 text-xs font-black tracking-widest uppercase">
+        <nav className="hidden xl:flex gap-4 text-[10px] font-black tracking-widest uppercase">
           {categories.map((cat) => {
+            const displayName = language === "ta" ? cat.name_ta : cat.name;
             const isActive = pathname === cat.href || (pathname === "/search" && pathname.includes(cat.name));
             return (
               <Link
@@ -114,7 +127,7 @@ export default function Navbar() {
                     : "text-gray-600"
                 }`}
               >
-                {cat.name}
+                {displayName}
                 {isActive && (
                   <span className="absolute bottom-0 left-0 h-0.5 w-full bg-[#d60000] rounded-full" />
                 )}
@@ -123,25 +136,42 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Action Elements: Search, Bookmark */}
-        <div className="flex items-center gap-3">
+        {/* Action Elements: Search, Language, Bookmark */}
+        <div className="flex items-center gap-2">
           {/* Search Form (Desktop) */}
           <form onSubmit={handleSearch} className="hidden lg:flex items-center relative">
             <input
               type="text"
-              placeholder="Search index..."
+              placeholder={t("searchIndex")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-9 pr-4 py-1.5 text-xs font-semibold rounded bg-white border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#d60000] focus:border-[#d60000] w-44 focus:w-60 transition-all duration-300 placeholder:text-gray-400 text-gray-900"
+              className="pl-8 pr-3 py-1.5 text-[11px] font-semibold rounded bg-white border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#d60000] focus:border-[#d60000] w-36 focus:w-48 transition-all duration-300 placeholder:text-gray-400 text-gray-900"
             />
-            <Search className="w-3.5 h-3.5 text-gray-400 absolute left-3 pointer-events-none" />
+            <Search className="w-3.5 h-3.5 text-gray-400 absolute left-2.5 pointer-events-none" />
           </form>
+
+          {/* Language Selector */}
+          <div className="flex items-center gap-1.5 border border-gray-200 rounded px-2.5 py-1.5 bg-gray-50 text-[9px] font-black uppercase tracking-wider shadow-sm select-none">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`hover:text-[#d60000] transition-colors cursor-pointer ${language === "en" ? "text-[#d60000] font-black" : "text-gray-450"}`}
+            >
+              EN
+            </button>
+            <span className="text-gray-300 text-[10px]">|</span>
+            <button
+              onClick={() => setLanguage("ta")}
+              className={`hover:text-[#d60000] transition-colors cursor-pointer ${language === "ta" ? "text-[#d60000] font-black" : "text-gray-450"}`}
+            >
+              தமிழ்
+            </button>
+          </div>
 
           {/* Bookmarks Shortcut */}
           <Link
-            href="/search?bookmarks=true"
-            className="p-2 text-gray-500 hover:text-[#d60000] relative rounded hover:bg-gray-100 transition-all"
-            title="Bookmarks"
+            href="/bookmarks"
+            className="p-2 text-gray-500 hover:text-[#d60000] relative rounded hover:bg-gray-100 transition-all border border-gray-200 bg-white shadow-sm"
+            title={t("viewPortfolio")}
           >
             <Bookmark className="w-4 h-4" />
             {bookmarkCount > 0 && (
@@ -154,7 +184,7 @@ export default function Navbar() {
           {/* Mobile Menu Trigger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-gray-650 hover:text-[#d60000] md:hidden rounded-lg hover:bg-gray-100 transition-all"
+            className="p-2 text-gray-600 hover:text-[#d60000] xl:hidden rounded-lg hover:bg-gray-100 transition-all border border-gray-200 bg-white"
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -163,31 +193,34 @@ export default function Navbar() {
 
       {/* Mobile Menu Panel */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-4 shadow-lg">
+        <div className="xl:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-4 shadow-lg">
           {/* Search (Mobile) */}
           <form onSubmit={handleSearch} className="flex items-center relative">
             <input
               type="text"
-              placeholder="Search topics, tags, authors..."
+              placeholder={t("searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 pr-4 py-2 w-full text-sm rounded bg-white border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#d60000] focus:border-[#d60000] placeholder:text-gray-450 text-gray-900"
+              className="pl-10 pr-4 py-2 w-full text-sm rounded bg-white border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#d60000] focus:border-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
             />
-            <Search className="w-4 h-4 text-gray-450 absolute left-3.5 pointer-events-none" />
+            <Search className="w-4 h-4 text-gray-400 absolute left-3.5 pointer-events-none" />
           </form>
 
           {/* Mobile Categories Links */}
           <div className="flex flex-col gap-3 font-bold text-xs uppercase tracking-wider">
-            {categories.map((cat) => (
-              <Link
-                key={cat.name}
-                href={cat.href}
-                onClick={() => setIsOpen(false)}
-                className="py-1.5 px-2 rounded hover:bg-gray-100 transition-colors text-gray-600"
-              >
-                {cat.name}
-              </Link>
-            ))}
+            {categories.map((cat) => {
+              const displayName = language === "ta" ? cat.name_ta : cat.name;
+              return (
+                <Link
+                  key={cat.name}
+                  href={cat.href}
+                  onClick={() => setIsOpen(false)}
+                  className="py-1.5 px-2 rounded hover:bg-gray-100 transition-colors text-gray-600"
+                >
+                  {displayName}
+                </Link>
+              );
+            })}
             <div className="h-px bg-gray-200 my-1" />
             <Link
               href="/admin"
@@ -195,7 +228,7 @@ export default function Navbar() {
               className="py-1.5 px-2 rounded hover:bg-gray-100 transition-colors text-[#d60000] flex items-center gap-2"
             >
               <Settings className="w-4 h-4" />
-              <span>Admin Console</span>
+              <span>{t("adminConsole")}</span>
             </Link>
           </div>
         </div>

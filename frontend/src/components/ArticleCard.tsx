@@ -33,7 +33,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
     <article className="group relative flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden h-full shadow-sm hover:shadow-md transition-all duration-200">
       
       {/* Article Image */}
-      <div className="relative aspect-video w-full overflow-hidden bg-gray-50 border-b border-gray-250">
+      <div className="relative aspect-video w-full overflow-hidden bg-gray-50 border-b border-gray-200">
         <img
           src={article.image}
           alt={article.title}

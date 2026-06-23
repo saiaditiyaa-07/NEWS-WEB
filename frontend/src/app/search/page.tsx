@@ -65,7 +65,7 @@ function SearchContent() {
           setResults(filtered);
         } else {
           // Fetch from FastAPI server
-          let url = "http://127.0.0.1:8000/api/articles?";
+          const url = "http://127.0.0.1:8000/api/articles?";
           const params: string[] = [];
           
           if (initialQuery) params.push(`search=${encodeURIComponent(initialQuery)}`);
@@ -180,7 +180,7 @@ function SearchContent() {
 
           {/* Category Filter selector */}
           <div className="space-y-2">
-            <span className="text-[10px] font-black uppercase tracking-wider text-gray-450 flex items-center gap-1">
+            <span className="text-[10px] font-black uppercase tracking-wider text-gray-400 flex items-center gap-1">
               <Filter className="w-3 h-3 text-gray-500" />
               <span>Category Filters</span>
             </span>
@@ -194,7 +194,7 @@ function SearchContent() {
                     className={`px-3 py-1.5 text-left text-xs font-bold rounded transition-all ${
                       isSel
                         ? "bg-[#003366] text-white shadow-sm"
-                        : "bg-gray-100 hover:bg-gray-250 text-gray-600"
+                        : "bg-gray-100 hover:bg-gray-200 text-gray-600"
                     }`}
                   >
                     {cat}
@@ -248,7 +248,7 @@ function SearchContent() {
             </span>
             {initialQuery && (
               <span>
-                Search term: <span className="text-gray-700 font-bold">"{initialQuery}"</span>
+                Search term: <span className="text-gray-700 font-bold">&quot;{initialQuery}&quot;</span>
               </span>
             )}
           </div>
@@ -257,7 +257,7 @@ function SearchContent() {
           {loading ? (
             <div className="h-40 flex flex-col items-center justify-center space-y-3">
               <Loader2 className="w-8 h-8 animate-spin text-blue-500" />
-              <p className="text-xs font-bold text-gray-450">Indexing news entries...</p>
+              <p className="text-xs font-bold text-gray-400">Indexing news entries...</p>
             </div>
           ) : results.length === 0 ? (
             /* Empty State */
@@ -265,7 +265,7 @@ function SearchContent() {
               <Sparkles className="w-10 h-10 text-gray-300 mx-auto" />
               <h3 className="font-extrabold text-sm text-gray-900">No Briefings Found</h3>
               <p className="text-xs text-gray-500 max-w-sm mx-auto leading-relaxed">
-                We couldn't locate reports matching those filters. Try adjusting keywords, removing tags, or resetting categories.
+                We couldn&apos;t locate reports matching those filters. Try adjusting keywords, removing tags, or resetting categories.
               </p>
               <button
                 onClick={clearFilters}
@@ -294,7 +294,7 @@ function SearchContent() {
 export default function SearchPage() {
   return (
     <Suspense fallback={
-      <div className="h- screen flex items-center justify-center">
+      <div className="h-screen flex items-center justify-center">
         <Loader2 className="w-8 h-8 animate-spin text-blue-500" />
       </div>
     }>

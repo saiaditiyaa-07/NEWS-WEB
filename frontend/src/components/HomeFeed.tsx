@@ -119,7 +119,7 @@ export default function HomeFeed({ initialArticles }: HomeFeedProps) {
 
       {/* Finality indicator */}
       {!hasMore && (
-        <p className="text-center text-xs font-semibold text-gray-450 py-6 border-t border-gray-200">
+        <p className="text-center text-xs font-semibold text-gray-400 py-6 border-t border-gray-200">
           All indices loaded. You are fully up to date with the briefing network.
         </p>
       )}

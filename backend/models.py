@@ -74,6 +74,8 @@ class ArticleUpdate(BaseModel):
     content_ta: Optional[str] = None
     summary_ta: Optional[str] = None
     category_ta: Optional[str] = None
+    ai_summary_ta: Optional[str] = None
+    key_takeaways_ta: Optional[List[str]] = None
     district: Optional[str] = None
 
 class ChatRequest(BaseModel):

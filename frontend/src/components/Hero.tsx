@@ -113,7 +113,7 @@ export default function Hero() {
             </Link>
           </h1>
 
-          <p className="text-gray-605 text-xs sm:text-sm font-semibold leading-relaxed line-clamp-3">
+          <p className="text-gray-600 text-xs sm:text-sm font-semibold leading-relaxed line-clamp-3">
             {mainStory.summary}
           </p>
         </div>

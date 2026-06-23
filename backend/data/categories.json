@@ -37,7 +37,7 @@
     "name_ta": "விளையாட்டு",
     "description": "Live cricket coverage, football schedules, tournaments, and local athletic bulletins.",
     "description_ta": "நேரடி கிரிக்கெட் கவரேஜ், போட்டிகள் மற்றும் விளையாட்டு செய்திகள்.",
-    "article_count": 0
+    "article_count": 1
   },
   {
     "id": "technology",
@@ -45,7 +45,7 @@
     "name_ta": "தொழில்நுட்பம்",
     "description": "AI, space research, optoelectronics, quantum physics, and software tools.",
     "description_ta": "செயற்கை நுண்ணறிவு, விண்வெளி ஆராய்ச்சி, மென்பொருள் மற்றும் தொழில்நுட்பம்.",
-    "article_count": 0
+    "article_count": 3
   },
   {
     "id": "cinema",
@@ -61,7 +61,7 @@
     "name_ta": "கல்வி",
     "description": "NEET updates, JEE admission notifications, Anna University news, and results.",
     "description_ta": "நீட், ஜே.இ.இ, அண்ணா பல்கலைக்கழக செய்திகள் மற்றும் தேர்வு முடிவுகள்.",
-    "article_count": 0
+    "article_count": 1
   },
   {
     "id": "jobs",
@@ -69,7 +69,7 @@
     "name_ta": "வேலைவாய்ப்பு",
     "description": "TNPSC vacancies, banking jobs, UPSC notices, and private corporate recruitment alerts.",
     "description_ta": "டி.என்.பி.எஸ்.சி, வங்கிப் பணிகள், யு.பி.எஸ்.சி மற்றும் தனியார் வேலைவாய்ப்பு செய்திகள்.",
-    "article_count": 0
+    "article_count": 1
   },
   {
     "id": "districtnews",

@@ -21,6 +21,13 @@ interface Article {
   trending: boolean;
   editors_pick: boolean;
   tags: string[];
+  title_ta?: string;
+  summary_ta?: string;
+  content_ta?: string;
+  category_ta?: string;
+  ai_summary_ta?: string;
+  key_takeaways_ta?: string[];
+  district?: string;
 }
 
 export default function AdminArticles() {
@@ -45,7 +52,26 @@ export default function AdminArticles() {
   const [trending, setTrending] = useState(false);
   const [editorsPick, setEditorsPick] = useState(false);
 
-  const categories = ["Technology", "Science", "Business", "Politics", "Entertainment"];
+  // Tamil and District settings
+  const [titleTa, setTitleTa] = useState("");
+  const [summaryTa, setSummaryTa] = useState("");
+  const [contentTa, setContentTa] = useState("");
+  const [categoryTa, setCategoryTa] = useState("தொழில்நுட்பம்");
+  const [aiSummaryTa, setAiSummaryTa] = useState("");
+  const [keyTakeawaysTaInput, setKeyTakeawaysTaInput] = useState("");
+  const [district, setDistrict] = useState("");
+
+  const categories = ["Technology", "Science", "Business", "Politics", "Entertainment", "Education", "Jobs"];
+
+  const categoryMap: Record<string, string> = {
+    "Technology": "தொழில்நுட்பம்",
+    "Science": "அறிவியல்",
+    "Business": "வணிகம்",
+    "Politics": "அரசியல்",
+    "Entertainment": "சினிமா / பொழுதுபோக்கு",
+    "Education": "கல்வி",
+    "Jobs": "வேலைவாய்ப்பு"
+  };
 
   // Fetch articles on load
   const loadArticles = async () => {
@@ -98,6 +124,16 @@ export default function AdminArticles() {
     setTagsInput("");
     setTrending(false);
     setEditorsPick(false);
+    
+    // Tamil and District resets
+    setTitleTa("");
+    setSummaryTa("");
+    setContentTa("");
+    setCategoryTa("தொழில்நுட்பம்");
+    setAiSummaryTa("");
+    setKeyTakeawaysTaInput("");
+    setDistrict("");
+    
     setFormSuccess("");
     setIsModalOpen(true);
   };
@@ -113,6 +149,16 @@ export default function AdminArticles() {
     setTagsInput(art.tags ? art.tags.join(", ") : "");
     setTrending(art.trending || false);
     setEditorsPick(art.editors_pick || false);
+    
+    // Tamil and District sets
+    setTitleTa(art.title_ta || "");
+    setSummaryTa(art.summary_ta || "");
+    setContentTa(art.content_ta || "");
+    setCategoryTa(art.category_ta || (categoryMap[art.category] || art.category));
+    setAiSummaryTa(art.ai_summary_ta || "");
+    setKeyTakeawaysTaInput(art.key_takeaways_ta ? art.key_takeaways_ta.join("\n") : "");
+    setDistrict(art.district || "");
+    
     setFormSuccess("");
     setIsModalOpen(true);
   };
@@ -140,6 +186,11 @@ export default function AdminArticles() {
       .map((t) => t.trim())
       .filter((t) => t.length > 0);
 
+    const takeawaysArray = keyTakeawaysTaInput
+      .split("\n")
+      .map((t) => t.trim())
+      .filter((t) => t.length > 0);
+
     const payload = {
       title,
       author,
@@ -149,7 +200,15 @@ export default function AdminArticles() {
       image: image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=400&q=80",
       tags: tagsArray,
       trending,
-      editors_pick: editorsPick
+      editors_pick: editorsPick,
+      // Tamil translations
+      title_ta: titleTa || title,
+      summary_ta: summaryTa || summary,
+      content_ta: contentTa || content,
+      category_ta: categoryTa || (categoryMap[category] || category),
+      ai_summary_ta: aiSummaryTa || `Automated AI synthesis of '${title}'.`,
+      key_takeaways_ta: takeawaysArray.length > 0 ? takeawaysArray : ["Important milestone in Tamil Nadu.", "Authored and verified by professional desk."],
+      district: district || null
     };
 
     try {
@@ -191,7 +250,14 @@ export default function AdminArticles() {
         reading_time: Math.max(1, content.split(" ").length / 200),
         trending,
         editors_pick: editorsPick,
-        tags: tagsArray
+        tags: tagsArray,
+        title_ta: titleTa || title,
+        summary_ta: summaryTa || summary,
+        content_ta: contentTa || content,
+        category_ta: categoryTa || (categoryMap[category] || category),
+        ai_summary_ta: aiSummaryTa || `Automated AI synthesis of '${title}'.`,
+        key_takeaways_ta: takeawaysArray.length > 0 ? takeawaysArray : ["Important milestone in Tamil Nadu.", "Authored and verified by professional desk."],
+        district: district || undefined
       };
 
       if (editingArticle) {
@@ -244,7 +310,7 @@ export default function AdminArticles() {
             <FileText className="w-6 h-6 text-[#d60000]" />
             <span>CMS Article Manager</span>
           </h1>
-          <p className="text-xs text-gray-555 font-semibold mt-1">
+          <p className="text-xs text-gray-500 font-semibold mt-1">
             Create, update, search, and delete articles directly.
           </p>
         </div>
@@ -323,7 +389,7 @@ export default function AdminArticles() {
                         >
                           {art.title}
                         </Link>
-                        <span className="text-[10px] text-gray-550 font-bold">ID: {art.id} • Published: {new Date(art.published_at).toLocaleDateString()}</span>
+                        <span className="text-[10px] text-gray-500 font-bold">ID: {art.id} • Published: {new Date(art.published_at).toLocaleDateString()}</span>
                       </div>
                     </td>
 
@@ -406,15 +472,20 @@ export default function AdminArticles() {
 
             <form onSubmit={handleSubmit} className="space-y-4 text-xs font-bold text-gray-600">
               
+              {/* Section 1: English Metadata */}
+              <div className="border-b border-gray-200 pb-2">
+                <h4 className="text-[10px] font-bold text-[#003366] uppercase tracking-wider">English Editorial Content</h4>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5 md:col-span-2">
-                  <label className="uppercase tracking-wider text-[9px]">Report Title</label>
+                  <label className="uppercase tracking-wider text-[9px]">Report Title (English)</label>
                   <input
                     type="text"
                     required
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    placeholder="Enter headline..."
+                    placeholder="Enter English headline..."
                     className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
                   />
                 </div>
@@ -432,10 +503,14 @@ export default function AdminArticles() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="uppercase tracking-wider text-[9px]">Category</label>
+                  <label className="uppercase tracking-wider text-[9px]">Category (English)</label>
                   <select
                     value={category}
-                    onChange={(e) => setCategory(e.target.value)}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      setCategory(val);
+                      setCategoryTa(categoryMap[val] || val);
+                    }}
                     className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] font-semibold"
                   >
                     {categories.map((cat) => (
@@ -467,7 +542,7 @@ export default function AdminArticles() {
                 </div>
 
                 <div className="flex flex-col gap-1.5 md:col-span-2">
-                  <label className="uppercase tracking-wider text-[9px]">Executive Summary</label>
+                  <label className="uppercase tracking-wider text-[9px]">Executive Summary (English)</label>
                   <textarea
                     required
                     rows={2}
@@ -479,15 +554,119 @@ export default function AdminArticles() {
                 </div>
 
                 <div className="flex flex-col gap-1.5 md:col-span-2">
-                  <label className="uppercase tracking-wider text-[9px]">Report Content Body</label>
+                  <label className="uppercase tracking-wider text-[9px]">Report Content Body (English)</label>
                   <textarea
                     required
-                    rows={5}
+                    rows={4}
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                     placeholder="Full body paragraphs..."
                     className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
                   />
+                </div>
+              </div>
+
+              {/* Section 2: Tamil Translation & AI Metadata */}
+              <div className="border-b border-gray-200 pt-2 pb-2">
+                <h4 className="text-[10px] font-bold text-[#003366] uppercase tracking-wider">Tamil Translation & AI Metadata</h4>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1.5 md:col-span-2">
+                  <label className="uppercase tracking-wider text-[9px]">Report Title (Tamil)</label>
+                  <input
+                    type="text"
+                    value={titleTa}
+                    onChange={(e) => setTitleTa(e.target.value)}
+                    placeholder="தலைப்பு (தமிழ்)..."
+                    className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 md:col-span-2">
+                  <label className="uppercase tracking-wider text-[9px]">Category (Tamil)</label>
+                  <input
+                    type="text"
+                    value={categoryTa}
+                    onChange={(e) => setCategoryTa(e.target.value)}
+                    placeholder="வகை (தமிழ்)..."
+                    className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 md:col-span-2">
+                  <label className="uppercase tracking-wider text-[9px]">Executive Summary (Tamil)</label>
+                  <textarea
+                    rows={2}
+                    value={summaryTa}
+                    onChange={(e) => setSummaryTa(e.target.value)}
+                    placeholder="செய்தி சுருக்கம் (தமிழ்)..."
+                    className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 md:col-span-2">
+                  <label className="uppercase tracking-wider text-[9px]">Report Content Body (Tamil)</label>
+                  <textarea
+                    rows={4}
+                    value={contentTa}
+                    onChange={(e) => setContentTa(e.target.value)}
+                    placeholder="முழு செய்தி விவரம் (தமிழ்)..."
+                    className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 md:col-span-2">
+                  <label className="uppercase tracking-wider text-[9px]">AI Executive Summary (Tamil)</label>
+                  <textarea
+                    rows={2}
+                    value={aiSummaryTa}
+                    onChange={(e) => setAiSummaryTa(e.target.value)}
+                    placeholder="ஏஐ செய்தி சுருக்கம் (தமிழ்)..."
+                    className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 md:col-span-2">
+                  <label className="uppercase tracking-wider text-[9px]">AI Key Takeaways (Tamil) - Enter one per line</label>
+                  <textarea
+                    rows={3}
+                    value={keyTakeawaysTaInput}
+                    onChange={(e) => setKeyTakeawaysTaInput(e.target.value)}
+                    placeholder="எ.கா:
+முக்கிய வானிலை மாற்றங்கள்.
+பள்ளிகளுக்கு விடுமுறை அறிவிப்பு."
+                    className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] placeholder:text-gray-400 text-gray-900 font-semibold"
+                  />
+                </div>
+              </div>
+
+              {/* Section 3: Geographic & Display Settings */}
+              <div className="border-b border-gray-200 pt-2 pb-2">
+                <h4 className="text-[10px] font-bold text-[#003366] uppercase tracking-wider">Geographic & Display Settings</h4>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1.5">
+                  <label className="uppercase tracking-wider text-[9px]">District Bulletin Tag (Tamil Nadu)</label>
+                  <select
+                    value={district}
+                    onChange={(e) => setDistrict(e.target.value)}
+                    className="px-3 py-2 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:ring-1 focus:ring-[#d60000] font-semibold"
+                  >
+                    <option value="">-- Not District Specific --</option>
+                    <option value="Chennai">Chennai (சென்னை)</option>
+                    <option value="Madurai">Madurai (மதுரை)</option>
+                    <option value="Coimbatore">Coimbatore (கோயம்புத்தூர்)</option>
+                    <option value="Trichy">Trichy (திருச்சி)</option>
+                    <option value="Salem">Salem (சேலம்)</option>
+                    <option value="Erode">Erode (ஈரோடு)</option>
+                    <option value="Tirunelveli">Tirunelveli (திருநெல்வேலி)</option>
+                    <option value="Ramanathapuram">Ramanathapuram (இராமநாதபுரம்)</option>
+                    <option value="Kanyakumari">Kanyakumari (கன்னியாகுமரி)</option>
+                    <option value="Thoothukudi">Thoothukudi (தூத்துக்குடி)</option>
+                    <option value="Vellore">Vellore (வேலூர்)</option>
+                  </select>
                 </div>
               </div>
 
@@ -510,7 +689,7 @@ export default function AdminArticles() {
                     onChange={(e) => setEditorsPick(e.target.checked)}
                     className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span>Mark Editor's Pick</span>
+                  <span>Mark Editor&apos;s Pick</span>
                 </label>
               </div>
 

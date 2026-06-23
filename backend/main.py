@@ -96,7 +96,7 @@ def create_article(payload: ArticleCreate):
     
     # Defaults
     ai_summary = payload.ai_summary_ta or f"Automated AI synthesis of '{payload.title}'."
-    key_takeaways = payload.key_takeaways or ["Important milestone in Tamil Nadu.", "Authored and verified by professional desk."]
+    key_takeaways = payload.key_takeaways_ta or ["Important milestone in Tamil Nadu.", "Authored and verified by professional desk."]
     
     sentiment = SentimentAnalysis(
         positive=random.randint(40, 90),
