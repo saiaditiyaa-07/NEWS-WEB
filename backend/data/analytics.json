@@ -1,15 +1,16 @@
 {
-  "total_views": 1420532,
+  "total_views": 1420540,
   "total_articles": 41,
   "active_users": 2410,
   "newsletter_subscribers": 84230,
   "category_views": {
-    "Technology": 620400,
+    "Technology": 620402,
     "Science": 310200,
     "Business": 290101,
     "Politics": 110500,
     "Entertainment": 89330,
-    "Sports": 1
+    "Sports": 4,
+    "Tamil Nadu": 3
   },
   "views_over_time": [
     {
